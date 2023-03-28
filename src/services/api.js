@@ -2,5 +2,5 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: "http://localhost:3000", //o que mais se repete
+  baseURL: "https://mynotelife1-emanuelbeco.b4a.run", //o que mais se repete
 });
