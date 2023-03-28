@@ -2,5 +2,5 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: "http://localhost:3333", //o que mais se repete
+  baseURL: "http://localhost:3000", //o que mais se repete
 });
