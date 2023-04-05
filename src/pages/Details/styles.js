@@ -25,6 +25,7 @@ export const Links = styled.ul`
 
     a {
       color: ${({ theme }) => theme.COLORS.WHITE};
+      overflow-wrap: break-word; //Quebrar linha
     }
   }
 `;
@@ -36,7 +37,7 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
 
-  > button:first-child {
+  > button {
     align-self: end;
   }
 
@@ -50,5 +51,6 @@ export const Content = styled.div`
     font-size: 16px;
     margin-top: 16px;
     text-align: justify;
+    overflow-wrap: break-word; //Quebrar linha
   }
 `;

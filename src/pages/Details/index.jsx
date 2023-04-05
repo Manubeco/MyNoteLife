@@ -31,11 +31,16 @@ export function Details() {
     }
   }
 
+  async function handleEdit(id) {
+    navigate(`/edit/${id}`);
+  }
+
   //cria um effect sem dependências, pois será carregado somente uma única vez
   useEffect(() => {
     async function fetchNote() {
       //requisição a API
       const response = await api.get(`/notes/${params.id}`);
+
       setData(response.data);
     }
 
@@ -49,6 +54,10 @@ export function Details() {
         <main>
           <Content>
             <ButtonText title="Excluir a nota" onClick={handleRemove} />
+            <ButtonText
+              title="Editar a nota"
+              onClick={() => handleEdit(data.id)}
+            />
 
             <h1>{data.title}</h1>
 
